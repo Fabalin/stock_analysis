@@ -1,10 +1,10 @@
 # Stock Analysis through VBA
 
-Coding in VBA to analyze the return of select green energy stocks. 
+Coding in VBA to analyze the volume and return of select green energy stocks. 
 
 ## Overview of Project
 
-Client's family believes in investing in green energy stocks due to the finite supply of fossil fuel as basis for energy. Currently, his family has all of their investments in DAQO New Energy Corp, a mnaufacturer of silicon wafers for solar panels. Client would like to diversify his investment portfolio in green energy stocks to increase the chances of return on their invesments. Client would like to assess the success of each company's stock in order to inform his decision in selecting candidates for diversifying his investment portfolio. A unique **ticker** was assigned as an abbreviated identifier for each company. 
+Client's family believes in investing in green energy stocks due to the finite supply of fossil fuel as basis for energy. Currently, his family has all of their investments in DAQO New Energy Corp, a manufacturer of silicon wafers for solar panels. Client would like to diversify his investment portfolio in green energy stocks to increase the chances of return on their invesments. Client would like to assess the success of each company's stock in order to inform his decision in selecting candidates for diversifying his investment portfolio. A unique **ticker** was assigned as an abbreviated identifier for each company. 
 
 ### Purpose
 
@@ -30,7 +30,7 @@ Based on the analysis *DQ* is a volitile stock to invest all of the client's cap
 
 ### Analysis of Code 
 
-Globally, the script would cycle through the rows of the dataset defined by its Year and would print the analyzed values in a different workbook based on the parameters specified. The data would then be formatted to help visualize the differences between each stock. For loops were used to cycle through the dataset and conditionals were used to extract the data for analysis if the criteria for tickers is met. 
+Globally, the script would cycle through the rows of the dataset defined by its year and would print the analyzed values in a different workbook based on the parameters specified. The data would then be formatted to help visualize the differences between each stock. For loops were used to cycle through the dataset and conditionals were used to extract the data for analysis if the criteria for tickers is met. 
 
 #### Original Code
 
@@ -42,11 +42,11 @@ Since there were 12 tickers in total, an array of 12 tickers stored as a string 
 
 ![Runtime of Original AllStocksAnalysis Code](https://github.com/Fabalin/stock_analysis/blob/main/Resources/GreenstocksOGTime.PNG)
 
-This code ran within a tenth of a second and is a tenfold increase in runtime from the refactored code. This is due to the number of loops utilized to run the analysis and cycle through all the rows of data multiple times. 
+This code ran close to half of a second and is a five fold increase in runtime from the refactored code. This is due to the number of loops utilized to run the analysis and cycle through all the rows of data multiple times. 
 
 #### Refactored Code
 
-The refactored code features a single loop that cycles through the rows of data once. to complete the analysis and uses the tickerIndex variable as a reference that unifies the 4 arrays created. These arrays are the tickers, totalVolume, starting and ending prices. Each array stores the data specific to the ticker that is identified by the tickerIndex variable. Finally, after storing the data based on the ticker idenfied, the tickerIndex variable would be increased to shift the analysis and store the analyzed data into a different index of the totalVolume, starting and ending prices arrays. This would effectively allow the program to loop through the data once to complete the analysis for all tickers. 
+The refactored code features a single loop that cycles through the rows of data once. to complete the analysis and uses the ticker index variable as a reference that unifies the 4 arrays created. These arrays are the tickers, total volume, starting and ending prices. Each array stores the data specific to the ticker that is identified by the ticker index variable. Finally, after storing the data based on the ticker idenfied, the ticker index variable would be increased to shift the analysis and store the analyzed data into a different index of the total volume, starting and ending prices arrays. This would effectively allow the program to loop through the data once to complete the analysis for all tickers. 
 
 ## Summary
 
